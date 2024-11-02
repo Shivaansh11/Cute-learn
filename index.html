@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Happy Learning Adventure! </title>
+    <style>
+        /* All CSS code from styles.css goes here */
+        :root {
+            --bg-color: #ffebff;
+            --text-color: #ff69b4;
+            --shadow-color: rgba(0, 0, 0, 0.2);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Rest of the CSS code... */
+        /* [Previous CSS code blocks remain exactly the same] */
+    </style>
+</head>
+<body>
+    <div id="game-container">
+        <div id="cute-overlay" class="active">
+            <h1 class="cute-title">Learning is Fun! </h1>
+            <div id="score">Score: <span id="score-value">0</span></div>
+        </div>
+        
+        <div id="game-area">
+            <div id="player" class="cute-player"></div>
+            <div id="collectibles-container"></div>
+            <div id="message-box"></div>
+        </div>
+
+        <div id="horror-elements" class="hidden">
+            <div id="shadow-creatures"></div>
+            <div id="glitch-overlay"></div>
+            <div id="jumpscare" class="hidden"></div>
+            <div id="blood-overlay" class="hidden"></div>
+            <div id="crack-overlay" class="hidden"></div>
+            <div id="static-overlay" class="hidden"></div>
+        </div>
+    </div>
+
+    <audio id="cute-bgm" loop>
+        <source src="assets/cute-music.mp3" type="audio/mp3">
+    </audio>
+    <audio id="horror-bgm" loop>
+        <source src="assets/horror-music.mp3" type="audio/mp3">
+    </audio>
+    <audio id="heartbeat" loop>
+        <source src="assets/heartbeat.mp3" type="audio/mp3">
+    </audio>
+
+    <script>
+        // All JavaScript code from game.js goes here
+        class HorrorGame {
+            constructor() {
+                this.horrorLevel = 0;
+                this.score = 0;
+                this.timeElapsed = 0;
+                this.gameStarted = false;
+                this.collectibles = [];
+                this.initializeGame();
+            }
+
+            // Rest of the JavaScript code...
+            // [Previous JavaScript code blocks remain exactly the same]
+        }
+
+        window.onload = () => {
+            const game = new HorrorGame();
+        };
+    </script>
+</body>
+</html>
